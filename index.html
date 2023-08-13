@@ -10,6 +10,9 @@
     <!-- Internal Styles Start Here -->
     <style>
         li{
+            color: gray;
+        }
+        #fruits-title {
             color: tomato;
         }
     </style>
@@ -19,12 +22,30 @@
         <h1>Welcome to my DOM</h1>
     </header>
     <main>
-        <h1>My Awesome DOM de baba</h1>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Places i like to visit</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
     </main>
     <footer>
 
@@ -33,7 +54,15 @@
     <!-- External JS Scripts Start Here -->
     <script src="./js/dom.js"></script>
     <script>
-        console.log('This is a internal js codes');
+        const liCollection = document.getElementsByTagName("li");
+        // console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li);
+        }
+        const allheadings = document.getElementsByTagName("h1");
+        for(const allheadings of allheadings){
+            console.log(allheadings.innerText);
+        }
     </script>
 </body>
 </html>
